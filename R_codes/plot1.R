@@ -21,9 +21,9 @@ dataVals <- names(dataSub)
 dataSub$Global_active_power  <- as.numeric(dataSub$Global_active_power)
 
 ## Draw histogram over global_active_power
-p1  <- png("plot1.png", bg = "transparent", width = 480, height = 480)
+png("plot1.png", bg = "transparent", width = 480, height = 480)
 with(dataSub,hist(Global_active_power, breaks = 12, col = "red",
                   main = "Global Active Power",
                   xlim = c(0,6), ylim = c(0,1200),
-                  xlab = "Global Active Power(kilowatts)"), ylab = "Frequency")
-p1 <- dev.off()
+                  xlab = "Global Active Power (kilowatts)"), ylab = "Frequency")
+dev.off()

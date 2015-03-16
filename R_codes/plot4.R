@@ -33,7 +33,7 @@ dataSub$Voltage  <- as.numeric(dataSub$Voltage)
 dataSub$Global_reactive_power   <- as.numeric(dataSub$Global_reactive_power)
 
 ## PLOT 4
-p4  <- png("plot4.png",bg = "transparent", width = 480, height = 480)
+png("plot4.png",bg = "transparent", width = 480, height = 480)
 par(mfrow = c(2,2))
 
 ## subplot 1 : Global active power
@@ -71,4 +71,4 @@ par(new = FALSE)
 with(dataSub, plot(date_time,Global_reactive_power, type = "l",
                    xlab="datetime", ylab = "Global_reactive_power"))
 
-p4  <- dev.off()
+dev.off()
